@@ -4,3 +4,5 @@ export class Potion{
     this.power = power;
   }
 }
+let potion = new Potion("potion", 10);
+console.log(potion);

@@ -4,3 +4,5 @@ export class Armor {
     this.power = power;
   }
 }
+let armor = new Armor("armor", 10);
+console.log(armor);

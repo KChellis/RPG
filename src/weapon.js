@@ -5,3 +5,5 @@ export class Weapon {
     this.power = power;
   }
 }
+let weapon = new Weapon("sword", "phys", 3);
+console.log(weapon);
