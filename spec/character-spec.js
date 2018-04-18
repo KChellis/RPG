@@ -19,4 +19,9 @@ describe ("Character", function(){
     character.getExp(100);
     expect(character.exp).toEqual(100);
   });
+  it ("should add level when needed exp is reached", function() {
+    character.exp = 1000;
+    character.levelUp();
+    expect(character.level).toEqual(2);
+  });
 });
