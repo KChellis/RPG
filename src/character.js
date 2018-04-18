@@ -9,6 +9,12 @@ export class Character {
   takeDamage(num) {
     this.currentHP -= num;
   }
+  getHeal(num) {
+    this.currentHP += num;
+    if (this.currentHP > this.maxHP) {
+      this.currentHP = this.maxHP;
+    }
+  }
 }
 let character = new Character("Bob");
 console.log(character);
