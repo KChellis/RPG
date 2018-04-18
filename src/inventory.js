@@ -33,7 +33,22 @@ export class Inventory {
     }
     return true;
   }
+
+  dropItem(item) {
+    let type = item.constructor.name;
+    if (type === "Weapon") {
+      let index = this.weapons.indexOf(item);
+      this.weapons.splice(index,1);
+    }else if (type === "Armor") {
+      let index = this.armors.indexOf(item);
+      this.armors.splice(index,1);
+    }else if (type === "Potion") {
+      let index = this.potions.indexOf(item);
+      this.potions.splice(index,1);
+    }
+  }
 }
+
 let inventory = new Inventory();
 console.log(inventory);
 let armor = new Armor("armor", 10);

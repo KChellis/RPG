@@ -5,17 +5,20 @@ import {Potion} from "./../src/potions.js"
 
 describe("Inventory", function() {
   let inventory = new Inventory();
-
+  let sword = new Weapon ("sword", "phys", 3);
   it ("should add weapons/armor/potions to respective inventories", function() {
-    let sword = new Weapon ("sword", "phys", 3);
     inventory.addItem(sword);
     expect(inventory.weapons).toEqual([sword]);
   });
   it ("should not add items if inventory is full", function() {
-    let sword = new Weapon ("sword", "phys", 3);
     inventory.weapons = ["sword", "wand", "scepter"];
     let outcome = inventory.addItem(sword);
     console.log(outcome);
     expect(outcome).toEqual(false);
+  });
+  it ("should remove dropped items from inventory", function() {
+    inventory.weapons = ["wand", sword, "scepter"];
+    inventory.dropItem(sword);
+    expect(inventory.weapons).toEqual(["wand", "scepter"]);
   });
 });

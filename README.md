@@ -18,6 +18,7 @@ _This page lays out the logic behind an rpg game._
 | **Program will add level once needed experience is reached** | User input: "get 1000 exp" | Output: "level 2" |
 | **Program will add weapons/armor/potions to respective inventories** | User input: "pickup sword" | Output: Weapons:[Sword] |
 | **Program will not add items if inventory is full** | User input: "pickup sword" | Output: "Inventory Full"  |
+| **Program will remove dropped items from inventory** | User input: "drop sword" | Output: Weapons: []  |
 | **Program will change active weapon/armor/shield** | User input: "choose sword" | Output: "Sword Equipped" |
 | **Program will create a character with class** | User input: "choose wizard, Kristen" | Output: "Class: Wizard name:Kristen, Health: 30 Level: 1 Physical Power:3 Agility:5 Magic Power:10 Defense:5 " |
 
