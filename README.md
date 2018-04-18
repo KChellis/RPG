@@ -11,11 +11,12 @@ _This page lays out the logic behind an rpg game._
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program will create a base character** | User input: "choose wizard, Kristen" | Output: "Class: Wizard name:Kristen, Health: 30 Level: 1 Physical Power:3 Agility:5 Magic Power:10 Defense:5 " |
+| **Program will create a base character** | User input: "choose wizard, Kristen" | Output: "name:Kristen, Health: 30 Level: 1 " |
 | **Program will remove health when character takes damage** | User input: "takes damage" | Output: "Health -5" |
 | **Program will add health when character uses potion** | User input: "use potion" | Output: "Health +20" |
 | **Program will add experience points to character** | User input: "win battle" | Output: "Experience +100" |
 | **Program will change active weapon/armor/shield** | User input: "choose sword" | Output: "Sword Equipped" |
+| **Program will create a character with class** | User input: "choose wizard, Kristen" | Output: "Class: Wizard name:Kristen, Health: 30 Level: 1 Physical Power:3 Agility:5 Magic Power:10 Defense:5 " |
 
 
 
