@@ -1,7 +1,5 @@
 import {Inventory} from "./../src/inventory.js";
 import {Weapon} from "./../src/weapon.js"
-import {Armor} from "./../src/armor.js"
-import {Potion} from "./../src/potions.js"
 
 describe("Inventory", function() {
   let inventory = new Inventory();

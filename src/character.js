@@ -1,5 +1,6 @@
 import {Inventory} from "./inventory.js";
-export class Character {
+
+class Character {
   constructor(name) {
     this.name = name;
     this.maxHP = 30;
@@ -42,5 +43,5 @@ export class Character {
     }
   }
 }
-let character = new Character("Bob");
-console.log(character);
+
+export {Character};

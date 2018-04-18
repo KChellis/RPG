@@ -1,8 +1,4 @@
-import {Weapon} from "./weapon.js"
-import {Armor} from "./armor.js"
-import {Potion} from "./potions.js"
-
-export class Inventory {
+class Inventory {
   constructor(){
     this.weapons = [];
     this.armors = [];
@@ -48,12 +44,4 @@ export class Inventory {
     }
   }
 }
-
-let inventory = new Inventory();
-console.log(inventory);
-let armor = new Armor("armor", 10);
-console.log(armor);
-let potion = new Potion("potion", 10);
-console.log(potion);
-let weapon = new Weapon("sword", "phys", 3);
-console.log(weapon);
+export {Inventory};
