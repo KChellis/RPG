@@ -1,3 +1,4 @@
+import {Inventory} from "./inventory.js";
 export class Character {
   constructor(name) {
     this.name = name;
@@ -6,6 +7,9 @@ export class Character {
     this.level = 1;
     this.exp = 0;
     this.nextLevel = 1000;
+    this.inventory = new Inventory();
+    this.weapon;
+    this.armor;
   }
   takeDamage(num) {
     this.currentHP -= num;
