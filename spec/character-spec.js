@@ -1,4 +1,8 @@
 import {Character} from "./../src/character.js";
+import {Inventory} from "./../src/inventory.js";
+import {Weapon} from "./../src/weapon.js"
+import {Armor} from "./../src/armor.js"
+import {Potion} from "./../src/potions.js"
 
 describe ("Character", function(){
 
@@ -24,4 +28,9 @@ describe ("Character", function(){
     character.levelUp();
     expect(character.level).toEqual(2);
   });
+  it ("should change active weapon/armor", function () {
+    let sword = new Weapon ("sword", "phys", 3);
+    character.changeGear(sword);
+    expect(character.weapon).toEqual(sword);
+  })
 });

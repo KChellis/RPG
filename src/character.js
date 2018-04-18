@@ -11,22 +11,34 @@ export class Character {
     this.weapon;
     this.armor;
   }
+
   takeDamage(num) {
     this.currentHP -= num;
   }
+
   getHeal(num) {
     this.currentHP += num;
     if (this.currentHP > this.maxHP) {
       this.currentHP = this.maxHP;
     }
   }
+
   getExp(num) {
     this.exp += num;
   }
+
   levelUp() {
     if(this.exp >= this.nextLevel) {
       this.level += 1;
       this.nextLevel += this.level * 1000;
+    }
+  }
+  changeGear(item) {
+    let type = item.constructor.name;
+    if (type === "Weapon") {
+      this.weapon = item;
+    }else if (type === "Armor") {
+      this.armor = item;
     }
   }
 }
