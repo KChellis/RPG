@@ -7,7 +7,7 @@ export class Inventory {
     this.weapons = [];
     this.armors = [];
     this.potions = [];
-    this.maxItems = 10;
+    this.maxItems = 3;
   }
 
   addItem(item) {
