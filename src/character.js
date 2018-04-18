@@ -3,6 +3,7 @@ import {Inventory} from "./inventory.js";
 class Character {
   constructor(name) {
     this.name = name;
+    this.money = 0;
     this.maxHP = 30;
     this.currentHP = 30;
     this.level = 1;

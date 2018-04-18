@@ -7,6 +7,36 @@ class Enemy{
     this.defenseP = defenseP;
     this.defenseM = defenseM;
     this.agility = agility;
+    this.weapon;
+    this.armor;
+    this.money;
+  }
+
+  dealDamage(type) {
+    if(type === "power") {
+      let attack = this.power + this.weapon.power;
+      return [attack, type];
+    }else if(type === "magic") {
+      let attack = this.power + this.weapon.power;
+      return [attack, type];
+    }
+  }
+
+  defend(attack) {
+    let hit;
+    if (attack[1] === "power" && this.armor.type === "power") {
+      hit = attack[0] - this.defenseP - this.armor.power;
+    }else if (attack[1] === "power") {
+      hit = attack[0] - this.defenseP;
+    }else if (attack[1] === "magic" && this.armor.type === "magic") {
+      hit = attack[0] - this.defenseM - this.armor.power;
+    }else if (attack[1] === "magic") {
+      hit = attack[0] - this.defenseM
+    }
+    if (hit < 0) {
+      hit = 0;
+    }
+    return hit;
   }
 }
 
