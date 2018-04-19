@@ -7,6 +7,7 @@ class Enemy{
     this.defenseP = defenseP;
     this.defenseM = defenseM;
     this.agility = agility;
+    this.expValue;
     this.weapon;
     this.armor;
     this.money;
@@ -33,8 +34,8 @@ class Enemy{
     }else if (attack[1] === "magic") {
       hit = attack[0] - this.defenseM
     }
-    if (hit < 0) {
-      hit = 0;
+    if (hit <= 0) {
+      hit = 1;
     }
     return hit;
   }
