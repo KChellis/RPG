@@ -9,7 +9,9 @@ class Job extends Character{
     this.defenseP = 7;
     this.defenseM = 5;
     this.agility = 3;
+    this.skills = [];
   }
+
   setJob() {
     let job = this.job;
     if (job === "warrior") {
@@ -17,27 +19,32 @@ class Job extends Character{
       this.magic = 3;
       this.defenseP = 7;
       this.defenseM = 5;
-      this.agility = 3;
+      this.agility = 5;
+      this.skills = ["charge"]
     }else if (job === "cleric") {
-      this.power = 3;
-      this.magic = 7;
-      this.defenseP = 5;
-      this.defenseM = 10;
+      this.power = 4;
+      this.magic = 8;
+      this.defenseP = 7;
+      this.defenseM = 8;
       this.agility = 3;
+      this.skills = ["heal"]
     }else if (job === "thief") {
-      this.power = 5;
+      this.power = 7;
       this.magic = 3;
       this.defenseP = 5;
       this.defenseM = 5;
       this.agility = 10;
+      this.skills = ["pickpocket"]
     }else if (job === "wizard") {
-      this.power = 3;
+      this.power = 4;
       this.magic = 10;
-      this.defenseP = 3;
-      this.defenseM = 5;
+      this.defenseP = 4;
+      this.defenseM = 7;
       this.agility = 5;
+      this.skills = ["fire ball"]
     }
   }
+
   dealDamage(type) {
     if(type === "power") {
       let attack = this.power + this.weapon.power;
@@ -59,8 +66,8 @@ class Job extends Character{
     }else if (attack[1] === "magic") {
       hit = attack[0] - this.defenseM
     }
-    if (hit < 0) {
-      hit = 0;
+    if (hit <= 0) {
+      hit = 1;
     }
     return hit;
   }
