@@ -35,6 +35,8 @@ class Character {
   }
   sellItem(item) {
     this.money += item.value;
+    console.log(this.inventory);
+    this.inventory.removeItem(item);
   }
 }
 

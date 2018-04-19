@@ -29,7 +29,7 @@ class Inventory {
     }
     return true;
   }
-  
+
   removeItem(item) {
     let type = item.constructor.name;
     if (type === "Weapon") {

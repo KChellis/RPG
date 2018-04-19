@@ -6,7 +6,7 @@ describe ("Character", function(){
 
   let character = new Character("Bob");
   let sword = new Weapon ("sword", "phys", 3);
-  character.inventory = [sword];
+  character.inventory.weapons = [sword];
   it ("Should create a base character", function() {
     expect(character.name).toEqual("Bob");
   });
