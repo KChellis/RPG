@@ -24,7 +24,7 @@ _This page lays out the logic behind an rpg game._
 | **Program will determine number of hit points taken based on type and attack power** | User input: "warrior takes magic hit power 10" | Output: 5 |
 | **Program will give character more skills at set levels** | User input: "warrior gets level 4" | Output: warrior learns Cleave skill|
 | **Program will add levelup points to selected attributes** | User input: "power" | Output: power = 11|
-
+| **Program will determine turn order based on agility** | User input: start battle | Output: hero goes first|
 
 
 ## Setup/Installation Requirements

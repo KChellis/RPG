@@ -11,15 +11,7 @@ describe("Job", function() {
     job.setJob();
     expect(job.power).toEqual(10);
   });
-  it("should determine total attack power", function(){
-    let attack = job.dealDamage(job.weapon.type);
-    expect(attack).toEqual([13, "power"]);
-  });
-  it ("should determine number of hit points taken based on type and attack power", function() {
-    let attack = [10, "magic"];
-    let hit = job.defend(attack);
-    expect(hit).toEqual(1);
-  });
+  
   it ("should give character more skills at set levels", function() {
     job.level = 4;
     job.addSkills();

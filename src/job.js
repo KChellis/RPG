@@ -93,39 +93,6 @@ class Job extends Character{
     }
   }
 
-  dealDamage(type) {
-    if(type === "power") {
-      let attack = this.power + this.weapon.power;
-      return [attack, type];
-    }else if(type === "magic") {
-      let attack = this.power + this.weapon.power;
-      return [attack, type];
-    }
-    this.weapon.durability -= Math.floor(attack/10);
-  }
-
-  defend(attack) {
-    let hit;
-    if (attack[1] === "power" && this.armor.type === "power") {
-      hit = attack[0] - this.defenseP - this.armor.power;
-    }else if (attack[1] === "power") {
-      hit = attack[0] - this.defenseP;
-    }else if (attack[1] === "magic" && this.armor.type === "magic") {
-      hit = attack[0] - this.defenseM - this.armor.power;
-    }else if (attack[1] === "magic") {
-      hit = attack[0] - this.defenseM
-    }
-    if (hit <= 0) {
-      hit = 1;
-    }
-    this.weapon.durability -= Math.floor(attack[0]/10);
-    this.currentHP -= hit;
-    if (this.currentHP > 0) {
-      return true;
-    } else {
-      return false;
-    }
-  }
 }
 
 export {Job};

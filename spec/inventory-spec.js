@@ -11,7 +11,6 @@ describe("Inventory", function() {
   it ("should not add items if inventory is full", function() {
     inventory.weapons = ["sword", "wand", "scepter"];
     let outcome = inventory.addItem(sword);
-    console.log(outcome);
     expect(outcome).toEqual(false);
   });
   it ("should remove dropped items from inventory", function() {

@@ -16,7 +16,7 @@ class Enemy{
     this.money;
   }
 
-  addValues() {
+  addTraits() {
     if(this.name === "Goblin") {
       this.health = 20;
       this.power = 5;

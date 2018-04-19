@@ -6,7 +6,7 @@ describe ("Enemy", function() {
   let enemy = new Enemy ("Goblin");
 
   it ("should add enemy stats based on name", function() {
-    enemy.addValue();
+    enemy.addTraits();
     expect(enemy.power).toEqual(5);
   });
 });
