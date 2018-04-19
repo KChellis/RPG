@@ -3,6 +3,7 @@ class Armor {
     this.name = name;
     this.type = type;
     this.power = power;
+    this.durability = 30;
   }
 }
 export {Armor};

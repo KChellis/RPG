@@ -3,6 +3,7 @@ class Weapon {
     this.name = name;
     this.type = type;
     this.power = power;
+    this.durabilty = 30;
   }
 }
 

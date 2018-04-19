@@ -71,6 +71,27 @@ class Job extends Character{
       }
     }
   }
+  levelUp() {
+    if(this.exp >= this.nextLevel) {
+      this.level += 1;
+      this.nextLevel += this.level * 1000;
+    }
+    return 5;
+  }
+
+  addPoints(attr) {
+    if (attr === "power") {
+      this.power += 1;
+    }else if (attr === "magic") {
+      this.magic += 1;
+    }else if (attr === "defenseP") {
+      this.defenseP += 1;
+    }else if (attr === "defenseM") {
+      this.defenseM += 1;
+    }else if (attr === "agility") {
+      this.agility += 1;
+    }
+  }
 
   dealDamage(type) {
     if(type === "power") {
@@ -80,6 +101,7 @@ class Job extends Character{
       let attack = this.power + this.weapon.power;
       return [attack, type];
     }
+    this.weapon.durability -= Math.floor(attack/10);
   }
 
   defend(attack) {
@@ -96,7 +118,13 @@ class Job extends Character{
     if (hit <= 0) {
       hit = 1;
     }
-    return hit;
+    this.weapon.durability -= Math.floor(attack[0]/10);
+    this.currentHP -= hit;
+    if (this.currentHP > 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 

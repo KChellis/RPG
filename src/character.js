@@ -14,10 +14,6 @@ class Character {
     this.armor;
   }
 
-  takeDamage(num) {
-    this.currentHP -= num;
-  }
-
   getHeal(num) {
     this.currentHP += num;
     if (this.currentHP > this.maxHP) {
@@ -29,12 +25,6 @@ class Character {
     this.exp += num;
   }
 
-  levelUp() {
-    if(this.exp >= this.nextLevel) {
-      this.level += 1;
-      this.nextLevel += this.level * 1000;
-    }
-  }
   changeGear(item) {
     let type = item.constructor.name;
     if (type === "Weapon") {

@@ -50,7 +50,7 @@ class Skill {
       this.power = 15;
       this.type = "attackP";
       this.duration = "once";
-    }else if (name === "heal all") {
+    }else if (name === "heal plus") {
       this.power = 30;
       this.type = "attackP";
       this.duration = "once";

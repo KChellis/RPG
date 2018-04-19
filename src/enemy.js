@@ -21,6 +21,7 @@ class Enemy{
       let attack = this.power + this.weapon.power;
       return [attack, type];
     }
+    this.weapon.durability -= Math.floor(attack/10);
   }
 
   defend(attack) {
@@ -37,6 +38,7 @@ class Enemy{
     if (hit <= 0) {
       hit = 1;
     }
+    this.weapon.durability -= Math.floor(attack[0]/10);
     return hit;
   }
 }

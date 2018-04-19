@@ -23,7 +23,7 @@ _This page lays out the logic behind an rpg game._
 | **Program will determine attack power and type** | User input: "warrior attack with sword" | Output: [13, "power"] |
 | **Program will determine number of hit points taken based on type and attack power** | User input: "warrior takes magic hit power 10" | Output: 5 |
 | **Program will give character more skills at set levels** | User input: "warrior gets level 4" | Output: warrior learns Cleave skill|
-
+| **Program will add levelup points to selected attributes** | User input: "power" | Output: power = 11|
 
 
 

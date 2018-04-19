@@ -25,4 +25,13 @@ describe("Job", function() {
     job.addSkills();
     expect(job.skills).toEqual(["charge", "cleave"]);
   });
+  it ("should add level when needed exp is reached", function() {
+    job.exp = 1000;
+    job.levelUp();
+    expect(job.level).toEqual(5);
+  });
+  it ("should add levelUp points to chosen attribute", function() {
+    job.addPoints("power");
+    expect(job.power).toEqual(11);
+  });
 });
