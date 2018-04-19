@@ -28,4 +28,9 @@ describe ("Battle", function() {
     expect(battle.turn.currentHP).toEqual(25);
     expect(outcome).toEqual(true);
   });
+  
+  it("should determine when the battle should end", function() {
+    result = battle.end(false);
+    expect(result).toEqual("You have died. Game Over!");
+  });
 });
