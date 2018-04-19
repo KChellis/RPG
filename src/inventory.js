@@ -29,8 +29,8 @@ class Inventory {
     }
     return true;
   }
-
-  dropItem(item) {
+  
+  removeItem(item) {
     let type = item.constructor.name;
     if (type === "Weapon") {
       let index = this.weapons.indexOf(item);

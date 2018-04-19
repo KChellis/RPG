@@ -4,6 +4,7 @@ class Armor {
     this.type = type;
     this.power = power;
     this.durability = 30;
+    this.value;
   }
 }
 export {Armor};

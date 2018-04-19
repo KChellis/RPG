@@ -33,6 +33,9 @@ class Character {
       this.armor = item;
     }
   }
+  sellItem(item) {
+    this.money += item.value;
+  }
 }
 
 export {Character};

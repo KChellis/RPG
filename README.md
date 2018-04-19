@@ -13,12 +13,14 @@ _This page lays out the logic behind an rpg game._
 | :-------------     | :------------- | :------------- |
 | **Program will create a base character** | User input: "choose wizard, Kristen" | Output: "name:Kristen, Health: 30 Level: 1 " |
 | **Program will remove health when character takes damage** | User input: "takes damage" | Output: "Health -5" |
-| **Program will add health when character uses potion** | User input: "use potion" | Output: "Health +20" |
+| **Program will add health when character heals** | User input: "use potion" | Output: "Health +20" |
 | **Program will add experience points to character** | User input: "win battle" | Output: "Experience +100" |
 | **Program will add level once needed experience is reached** | User input: "get 1000 exp" | Output: "level 2" |
 | **Program will add weapons/armor/potions to respective inventories** | User input: "pickup sword" | Output: Weapons:[Sword] |
+| **Program will add money to character** | User input: "sell sword" | Output: Money : 50 |
 | **Program will not add items if inventory is full** | User input: "pickup sword" | Output: "Inventory Full"  |
-| **Program will remove dropped items from inventory** | User input: "drop sword" | Output: Weapons: []  |
+| **Program will remove dropped/sold items from inventory** | User input: "drop sword" | Output: Weapons: []  |
+
 | **Program will change active weapon/armor/shield** | User input: "choose sword" | Output: "Sword Equipped" |
 | **Program will determine attack power and type** | User input: "warrior attack with sword" | Output: [13, "power"] |
 | **Program will determine number of hit points taken based on type and attack power** | User input: "warrior takes magic hit power 10" | Output: 5 |
