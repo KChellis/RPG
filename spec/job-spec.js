@@ -23,6 +23,6 @@ describe("Job", function() {
   it ("should give character more skills at set levels", function() {
     job.level = 4;
     job.addSkills();
-    expect(job.skills).toEqual(["charge", "cleave"])
+    expect(job.skills).toEqual(["charge", "cleave"]);
   });
 });

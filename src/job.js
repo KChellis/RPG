@@ -45,6 +45,33 @@ class Job extends Character{
     }
   }
 
+  addSkills() {
+    let level = this.level;
+    let job = this.job;
+    let length = this.skills.length;
+    if (level === 4 && length === 1) {
+      if (job === "warrior") {
+        this.skills.push("cleave");
+      }else if (job === "cleric") {
+        this.skills.push("counter attack");
+      }else if (job === "thief") {
+        this.skills.push("backstab");
+      }else if (job === "wizard") {
+        this.skills.push("blizzard");
+      }
+    }else if (level === 7 && length === 2) {
+      if (job === "warrior") {
+        this.skills.push("stoneskin");
+      }else if (job === "cleric") {
+        this.skills.push("heal all");
+      }else if (job === "thief") {
+        this.skills.push("double slash");
+      }else if (job === "wizard") {
+        this.skills.push("lightning");
+      }
+    }
+  }
+
   dealDamage(type) {
     if(type === "power") {
       let attack = this.power + this.weapon.power;
