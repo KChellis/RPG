@@ -10,7 +10,6 @@ describe ("Battle", function() {
   hero.armor = new Armor("leather","magic", 4);
   let enemy = new Enemy ("Goblin");
   enemy.addTraits();
-  console.log(enemy);
   let battle = new Battle (hero, enemy);
 
   it ("should determine turn order based on agility", function() {
@@ -28,9 +27,10 @@ describe ("Battle", function() {
     expect(battle.turn.currentHP).toEqual(25);
     expect(outcome).toEqual(true);
   });
-  
+
   it("should determine when the battle should end", function() {
-    result = battle.end(false);
-    expect(result).toEqual("You have died. Game Over!");
+    battle.turn = enemy;
+    let result = battle.endBattle();
+    expect(result).toEqual(`You have defeated the ${enemy.name}`);
   });
 });

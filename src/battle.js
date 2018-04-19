@@ -51,7 +51,13 @@ class Battle {
       return false;
     }
   }
-
+  endBattle() {
+    if(this.turn === this.hero) {
+      return "You have died. Game Over!";
+    }else {
+      return `You have defeated the ${this.enemy.name}`;
+    }
+  }
 }
 
 export {Battle};
